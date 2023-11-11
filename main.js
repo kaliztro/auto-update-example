@@ -41,10 +41,10 @@ ipcMain.on('app_version', (event) => {
 });
 
 autoUpdater.on('update-available', () => {
-    mainWindow.webContents.send('update_available');
+    mainWindow.webContents.send('atualizacao_disponivel');
 });
 autoUpdater.on('update-downloaded', () => {
-    mainWindow.webContents.send('update_downloaded');
+    mainWindow.webContents.send('atualizacao_baixada');
 });
 
 ipcMain.on('restart_app', () => {

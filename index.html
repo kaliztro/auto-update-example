@@ -56,12 +56,12 @@
     const restartButton = document.getElementById('restart-button');
     ipcRenderer.on('update_available', () => {
       ipcRenderer.removeAllListeners('update_available');
-      message.innerText = 'A new update is available. Downloading now...';
+      message.innerText = 'Uma nova atualização está disponivel e está sendo baixada';
       notification.classList.remove('hidden');
     });
     ipcRenderer.on('update_downloaded', () => {
       ipcRenderer.removeAllListeners('update_downloaded');
-      message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+      message.innerText = 'Atualização baixada. A atualização será instalada ao fechar. Reiniciar agora??';
       restartButton.classList.remove('hidden');
       notification.classList.remove('hidden');
     });
