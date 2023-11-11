@@ -31,6 +31,7 @@
 
 <body>
   <h1>Electron exemplo de auto update</h1>
+  <h2> versao?</h2>
   <p id="version"></p>
   <div id="notification" class="hidden">
     <p id="message"></p>
@@ -73,4 +74,5 @@
       ipcRenderer.send('restart_app');
     }
   </script>
+    <script src="./preload.js" preload></script>
 </body>
